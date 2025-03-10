@@ -1,0 +1,20 @@
+.section-footer{
+    background-color: #111111;
+    &__links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        justify-self: center;
+        margin-bottom: 2rem;
+        &__line{
+            height: 24px;
+            width: 0.5px;
+            background-color: #F8FAFF;
+            opacity: 0.08;
+        }
+        *:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+}
