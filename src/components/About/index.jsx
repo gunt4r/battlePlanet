@@ -4,6 +4,7 @@ import yellowSatellite from '@assets/aboutSatelliteYellow.png';
 import redSatellite from '@assets/aboutSatelliteRed.png';
 import { useState,useEffect } from 'react';
 import VideoCard from './VideoCard';
+import '../../index.scss'
 export default function About() {
     const [scrollY, setScrollY] = useState(0);
     

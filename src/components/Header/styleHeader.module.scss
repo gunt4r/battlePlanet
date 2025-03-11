@@ -4,6 +4,7 @@
   justify-content: space-around;
   padding-top: 3rem;
   position: sticky;
+  z-index: 100;
   &__nav {
     display: flex;
     align-items: center;
@@ -37,5 +38,17 @@
     &__item:not(:last-child) {
       margin-right: 2rem;
     }
+  }
+}
+@media screen and (max-width: 640px) {
+  .section-header {
+    margin-bottom: 8rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-header {
+    max-width: 1140px;
+    justify-self: center;
+    width: 100%;
   }
 }

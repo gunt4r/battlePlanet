@@ -46,3 +46,110 @@
     }
   }
 }
+
+@media screen and (max-width: 1250px) {
+  .section-gameplay__content {
+    &--planetB {
+      height: 700px;
+      top: 50%;
+    }
+    &--planetR {
+      height: 700px;
+      top: 50%;
+    }
+    &__cards {
+      height: 450px;
+    }
+    &--satelliteL {
+      left: 5%;
+    }
+    &--satelliteR {
+      height: 80px;
+      right: 5%;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-gameplay__content {
+    &--planetB {
+      height: 400px;
+      top: 70%;
+    }
+    &--planetR {
+      height: 400px;
+      top: 70%;
+    }
+    &__cards {
+      height: 350px;
+      padding-top: 3rem;
+    }
+    &--satelliteL {
+      height: 90px;
+      left: 0;
+      top: 54%;
+    }
+    &--satelliteR {
+      height: 65px;
+      right: 4%;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .section-gameplay__content {
+    &__cards {
+      height: 300px;
+      padding-top: 4rem;
+    }
+    &--satelliteL {
+      display: none;
+    }
+    &--satelliteR {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .section-gameplay__content {
+    &--planetB {
+      height: 434px;
+      top: 35%;
+      left: -25px;
+    }
+    &--planetR {
+      height: 422px;
+      top: 68%;
+      right: -23px;
+    }
+    &__cards {
+      height: 250px;
+      padding-top: 2rem;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-gameplay {
+    height: 110vh;
+    &__content {
+      height: 110vh;
+
+      &--planetB {
+        height: 700px;
+        top: 50%;
+      }
+      &--planetR {
+        height: 700px;
+        top: 50%;
+      }
+      &__cards {
+        height: 450px;
+      }
+      &--satelliteL {
+        left: 5%;
+      }
+      &--satelliteR {
+        height: 80px;
+        right: 5%;
+      }
+    }
+  }
+}

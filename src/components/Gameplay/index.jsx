@@ -9,19 +9,25 @@ import satelliteRight from '@assets/gameplaySatelliteRight.png';
 import { useEffect,useState } from 'react';
 export default function Gameplay() {
     const [scrollY, setScrollY] = useState(0);
-
+    const [showParagraphMobile,setShowParagraphMobile] = useState(false);
     useEffect(() => {
       const handleScroll = () => {
         setScrollY(window.scrollY);
       };
-  
+      const handleParagraph = () => {
+        const screenWidth = window.innerWidth;
+        if (screenWidth < 451) setShowParagraphMobile(true);
+        else setShowParagraphMobile(false);
+      }
       window.addEventListener('scroll', handleScroll);
+      window.addEventListener('resize', handleParagraph);
+      handleParagraph();
       return () => window.removeEventListener('scroll', handleScroll);
     }, []);
   return (
     <section className={styles['section-gameplay']}>
       <article className={styles['section-gameplay__content']}>
-        <ParagraphText>
+        {showParagraphMobile ? (<ParagraphText>
           Own a planet to dominate the Universe!
           <br />
           Expand your planetary empire by managing resources and building
@@ -29,7 +35,9 @@ export default function Gameplay() {
           <br /> signature decks.Forge alliances, and win epic battles.
           <br />
           Сlimb the leaderboard, and claim your place in the Universe!
-        </ParagraphText>
+        </ParagraphText>) : (<ParagraphText>
+          Take part in battles and colonize planets. Choose your strategy and defeat your opponents: play for attrition, control or go on an aggressive attack
+        </ParagraphText>) }
         <TitleText>unique gameplay</TitleText>
         <img
           className={styles['section-gameplay__content__cards']}
@@ -40,6 +48,7 @@ export default function Gameplay() {
         <img className={styles['section-gameplay__content--planetR']}  style={{ transform: `translateY(${-scrollY * 0.15}px)` }} src={planetRed} alt="planet red" />
         <img className={styles['section-gameplay__content--satelliteL']}  style={{ transform: `translateY(${-scrollY * 0.09}px)` }} src={satelliteLeft} alt="satellite" />
         <img className={styles['section-gameplay__content--satelliteR']}  style={{ transform: `translateY(${-scrollY * 0.09}px)` }} src={satelliteRight} alt="satellite" />
+        {showParagraphMobile && (<ParagraphText>Special cards with various characteristics and properties. Each signature belongs toone of three elements: BTC, ETH, or DASH, opening unlimited possibilities for creating powerful combinations.</ParagraphText>)}
       </article>
     </section>
   );

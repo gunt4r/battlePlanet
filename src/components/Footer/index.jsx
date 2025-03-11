@@ -4,25 +4,37 @@ import ParagraphText from '../ParagraphText';
 import ButtonCenter from '../ButtonCenter';
 import Logo from '../Logo';
 import Socials from '../Socials';
-
+import { useEffect,useState } from 'react';
 import FooterLink from './FooterLink';
 export default function Footer() {
+  const [showParagraphMobile,setShowParagraphMobile] = useState(false);
+      useEffect(() => {
+       
+        const handleParagraph = () => {
+          const screenWidth = window.innerWidth;
+          if (screenWidth < 451) setShowParagraphMobile(true);
+          else setShowParagraphMobile(false);
+        }
+        window.addEventListener('resize', handleParagraph);
+      }, []);
   return (
     <footer className={styles['section-footer']}>
-      <ParagraphText>
+      {!showParagraphMobile && (<ParagraphText>
         AWESOME SIGNATURES OF THREE ELEMENTS: $BTC, $ETH, $DASH <br /> OPENING
         UNLIMITED POSSIBILITIES AND POWERFULL COMBINATIONS!
         <br />
         Is there a lot of profit to be made by the Leader of an Entire Planet?
         <br /> Are you ready to check it out?!
-      </ParagraphText>
+      </ParagraphText>)}
       <TitleText>
         READY TO COLONIZE <br /> UNIVERSE?
       </TitleText>
-      <ParagraphText>
+      {showParagraphMobile ? (<ParagraphText>
         The Universe is vast, but only the strongest will survive.
         <br /> Will you rise up the challenge?!
-      </ParagraphText>
+      </ParagraphText>) : (<ParagraphText>
+        Special cards with various characteristics and properties. Each signature belongs toone of three elements: BTC, ETH, or DASH, opening unlimited possibilities for creating powerful combinations.
+      </ParagraphText>)}
       <ButtonCenter>Lets go</ButtonCenter>
       <Logo
         stylesWrapper={{

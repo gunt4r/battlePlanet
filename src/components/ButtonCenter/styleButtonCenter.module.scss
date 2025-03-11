@@ -19,3 +19,7 @@
   align-items: center;
   justify-content: center;
 }
+.element-button:hover {
+  transition: 0.4s ease-in-out;
+  opacity: 0.7;
+}

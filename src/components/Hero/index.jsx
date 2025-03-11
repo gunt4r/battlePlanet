@@ -10,12 +10,28 @@ import ButtonCenter from '../ButtonCenter';
 import Socials from '../Socials';
 export default function Hero() {
     const [scrollY, setScrollY] = useState(0);
-
+    const [fontSize, setFontSize] = useState('136px');
+    const [showParagraph,setShowParagraph] = useState(true);
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
+    const updateFontSize = () => {
+      const screenWidth = window.innerWidth;
+      let newSize = "136px";
 
+      if (screenWidth < 1250) newSize = "100px";
+      if (screenWidth < 900) newSize = "72px";
+      if (screenWidth < 640) {newSize = "59px";
+        setShowParagraph(false);
+      };
+
+      setFontSize(newSize);
+    };
+
+    window.addEventListener("resize", updateFontSize);
+    window.addEventListener("scroll", handleScroll);
+    updateFontSize();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -41,12 +57,12 @@ export default function Hero() {
           className={style['section-hero__content__satellite--red']}
           style={{ transform: `translateY(${-scrollY * 0.5}px)` }}
         />
-        <ParagraphText styles={{ marginTop: '30vh', marginBottom: '1rem' }}>
+        <ParagraphText styles={{ marginTop: '30vh', marginBottom: '1rem',display: showParagraph ? 'block' : 'none'}}>
           Sci-Fi, Signature Collection, Multi stage Game
         </ParagraphText>
-        <TitleText styles={{ fontSize: '136px',position:'relative',zIndex:'100' }}>BATTLE PLANETS</TitleText>
+        <TitleText styles={{ fontSize,position:'relative',zIndex:'100' }}>BATTLE PLANETS</TitleText>
         <ButtonCenter styles={{marginTop:'2rem'}}>play</ButtonCenter>
-        <Socials style={{position:'absolute',bottom:'0',left:'10%',transform:'translateX(-50%)',zIndex:'100'}} />
+        <Socials />
       </section>
     </section>
   );

@@ -1,7 +1,7 @@
 .section-title {
   // font-family: "Venite Adoremus";
   font-size: 5rem;
-  line-height: 136px;
+  line-height: 110x;
   text-align: center;
   letter-spacing: 0.03em;
   color: #f8faff;
@@ -15,4 +15,16 @@
   margin-right: auto;
   margin-left: auto;
   text-transform: uppercase;
+}
+@media screen and (max-width: 992px) {
+  .section-title {
+    font-size: 4rem;
+    line-height: 80px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .section-title {
+    font-size: 53px;
+    line-height: 55px;
+  }
 }

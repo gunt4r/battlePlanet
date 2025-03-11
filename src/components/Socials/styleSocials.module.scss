@@ -1,9 +1,24 @@
 .section-socials {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 3rem;
-    a:not(:last-child) {
-        margin-right: 2rem;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  transform: translateX(-50%);
+  z-index: 100;
+  a:not(:last-child) {
+    margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .section-socials {
+    left: 15%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .section-socials {
+    display: none;
+  }
 }

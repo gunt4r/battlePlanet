@@ -19,8 +19,14 @@
   cursor: pointer;
   background: rgba(17, 17, 17, 0.24);
   backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.centerButton:hover {
+  transition: 0.4s ease-in-out;
+  opacity: 0.7;
+}
 .progressBar {
   position: absolute;
   bottom: 20px;
@@ -37,4 +43,9 @@
   background: #fff;
   width: 0;
   transition: width 0.2s linear;
+}
+@media screen and (max-width: 450px) {
+  .videoCard {
+    width: 310px;
+  }
 }
