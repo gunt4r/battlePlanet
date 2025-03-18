@@ -4,7 +4,7 @@ export default function SocialIcons({ link, children, style }) {
     <a
       href={link}
       style={{ color: '#fff', ...style }}
-      className={styles['section-socials']}
+      className={styles['section-socials__icons']}
     >
       {children}
     </a>

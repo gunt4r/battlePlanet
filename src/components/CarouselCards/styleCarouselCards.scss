@@ -1,7 +1,7 @@
-.section-carousel{
+.section-carousel__cards {
   .react-responsive-3d-carousel__item {
-    width: 400px !important;
-    height: 150px !important;
+    width: 270px !important;
+    height: 330px !important;
   }
   @media screen and (max-width: 640px) {
     .react-responsive-3d-carousel__item {
@@ -9,12 +9,5 @@
       height: 120px !important;
     }
   }
-  .zoomed {
-    overflow: visible !important;
-    z-index: 1000;
   
-    img {
-      transform: scale(1.2);
-    }
-  }
-  }
+}

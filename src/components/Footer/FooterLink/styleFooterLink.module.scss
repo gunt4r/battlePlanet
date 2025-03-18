@@ -8,3 +8,7 @@
   text-transform: uppercase;
   text-decoration: none;
 }
+.section-footer__link:hover {
+  opacity: 0.7;
+  transition: 0.4s ease-in-out;
+}

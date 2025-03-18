@@ -19,6 +19,10 @@
         color: #f8faff;
         text-decoration: none;
       }
+      &__link:hover {
+        opacity: 0.7;
+        transition: 0.4s ease-in-out;
+      }
       &__button {
         background: url('@assets/buttonBackgroundPlay.svg') no-repeat;
         background-position: center;
