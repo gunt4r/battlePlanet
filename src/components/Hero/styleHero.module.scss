@@ -11,8 +11,8 @@
   );
   position: relative;
   &__content {
-    background-image: url(/src/assets/backgroundHero.png),
-      url(/src/assets/backgroundPlanetHero.png);
+    background-image: url(/public/assets/backgroundHero.png),
+      url(/public/assets/backgroundPlanetHero.png);
     background-position: center center, center 50vh;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, 80% 100vh;

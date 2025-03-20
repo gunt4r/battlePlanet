@@ -1,4 +1,4 @@
-import logo from '@assets/logo.svg';
+import logo from '/assets/logo.svg';
 import style from './styleLogo.module.scss';
 import classNames from 'classnames';
 export default function Logo({stylesWrapper,stylesElement}) {

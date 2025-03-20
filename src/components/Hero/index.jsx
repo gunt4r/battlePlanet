@@ -1,8 +1,8 @@
 import style from './styleHero.module.scss';
 import Header from '../Header';
-import blueSatellite from '@assets/heroSatelliteBlue.png';
-import redSatellite from '@assets/heroSatelliteRed.png';
-import bigSatellite from '@assets/heroSatelliteBig.png';
+import blueSatellite from '/assets/heroSatelliteBlue.png';
+import redSatellite from '/assets/heroSatelliteRed.png';
+import bigSatellite from '/assets/heroSatelliteBig.png';
 import ParagraphText from '../ParagraphText';
 import TitleText from '../TitleText';
 import { useState,useEffect } from 'react';

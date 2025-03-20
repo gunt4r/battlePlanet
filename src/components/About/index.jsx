@@ -1,7 +1,7 @@
 import style from './styleAbout.module.scss';
 import TitleText from '../TitleText';
-import yellowSatellite from '@assets/aboutSatelliteYellow.png';
-import redSatellite from '@assets/aboutSatelliteRed.png';
+import yellowSatellite from '/assets/aboutSatelliteYellow.png';
+import redSatellite from '/assets/aboutSatelliteRed.png';
 import { useState,useEffect } from 'react';
 import VideoCard from './VideoCard';
 import '../../index.scss'

@@ -1,11 +1,11 @@
 import styles from './styleGameplay.module.scss';
 import ParagraphText from '../ParagraphText';
 import TitleText from '../TitleText';
-import gameplayCards from '@assets/gameplayCards.png';
-import planetBlue from '@assets/gameplayPlanetBlue.png';
-import planetRed from '@assets/gameplayPlanetRed.png';
-import satelliteLeft from '@assets/gameplaySatelliteLeft.png';
-import satelliteRight from '@assets/gameplaySatelliteRight.png';
+import gameplayCards from '/assets/gameplayCards.png';
+import planetBlue from '/assets/gameplayPlanetBlue.png';
+import planetRed from '/assets/gameplayPlanetRed.png';
+import satelliteLeft from '/assets/gameplaySatelliteLeft.png';
+import satelliteRight from '/assets/gameplaySatelliteRight.png';
 import { useEffect,useState } from 'react';
 export default function Gameplay() {
     const [scrollY, setScrollY] = useState(0);
