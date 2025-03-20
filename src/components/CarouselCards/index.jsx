@@ -5,7 +5,7 @@ import './styleCarouselCards.scss';
 const images = [
     '/assets/CarouselCards/Acropolis.png',
     '/assets/CarouselCards/Beacon.png',
-    '/assets/CarouselCards/BigBang.png',
+    '/assets/CarouselCards/Bigbang.png',
     '/assets/CarouselCards/Blackhole.png',
     '/assets/CarouselCards/Breakthrough.png',
     '/assets/CarouselCards/ClimaticWeapons.png',
