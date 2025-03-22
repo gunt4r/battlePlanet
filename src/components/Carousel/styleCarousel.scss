@@ -1,20 +1,73 @@
-.section-carousel{
+.section-carousel {
+  &__gallery {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    padding-top: 1%;
+    background: rgba(0, 0, 0, 0.9);
+    &__close {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      color: #fff;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    &__images {
+      position: absolute;
+      z-index: 10000;
+    }
+  }
   .react-responsive-3d-carousel__item {
     width: 400px !important;
     height: 150px !important;
   }
+  @media screen and (max-width: 1024px) {
+    .section-carousel {
+      &__gallery {
+        padding-top: 15%; 
+        &__close {
+          top: 25px;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .section-carousel {
+      &__gallery {
+        padding-top: 25vh; 
+        &__close {
+          top: 30px;
+        }
+      }
+    }
+  }
   @media screen and (max-width: 640px) {
-    .react-responsive-3d-carousel__item {
-      width: 200px !important;
-      height: 120px !important;
+    .section-carousel {
+      &__gallery {
+        padding-top: 30vh; 
+        &__close {
+          top: 40px; 
+        }
+      }
+  
+      .react-responsive-3d-carousel__item {
+        width: 200px !important;
+        height: 120px !important;
+      }
     }
   }
   .zoomed {
     overflow: visible !important;
     z-index: 1000;
-  
+
     img {
       transform: scale(1.2);
     }
   }
-  }
+}

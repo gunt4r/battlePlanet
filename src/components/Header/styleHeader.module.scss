@@ -11,7 +11,7 @@
     &__item {
       list-style: none;
       &__link {
-        // font-family: 'Nebula';
+        font-family: "Orbitron", sans-serif;
         font-weight: 400;
         font-size: 24px;
         line-height: 24px;
@@ -22,21 +22,6 @@
       &__link:hover {
         opacity: 0.7;
         transition: 0.4s ease-in-out;
-      }
-      &__button {
-        background: url('/assets/buttonBackgroundPlay.svg') no-repeat;
-        background-position: center;
-        background-size: contain;
-        width: 162px;
-        height: 56px;
-        // font-family: 'Nebula';
-        font-weight: 400;
-        font-size: 24px;
-        color: #f8faff;
-        text-decoration: none;
-        text-align: center;
-        line-height: 54px;
-        letter-spacing: 0.1em;
       }
     }
     &__item:not(:last-child) {

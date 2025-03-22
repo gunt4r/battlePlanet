@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import image1 from '/assets/imageCarousel1.jpeg';
 import image2 from '/assets/imageCarousel2.jpeg';
 import image3 from '/assets/imageCarousel3.jpeg';
@@ -12,7 +12,9 @@ import image10 from '/assets/imageCarousel10.jpeg';
 import { Carousel } from 'react-responsive-3d-carousel';
 import 'react-responsive-3d-carousel/dist/styles.css';
 import './styleCarousel.scss';
-
+import ImageGallery from 'react-image-gallery';
+import { IoClose } from 'react-icons/io5';
+import 'react-image-gallery/styles/css/image-gallery.css';
 const images = [
   image1,
   image2,
@@ -25,12 +27,23 @@ const images = [
   image9,
   image10,
 ];
-
+const imagesGallery = images.map((src) => ({
+  original: src,
+  thumbnail: src,
+}));
 export default function CarouselComponent() {
   const cardRefs = useRef([]);
-
+  const [showGallery, setShowGallery] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const handleGallery = (index) => {
+    setCurrentIndex(index);
+    setShowGallery(true);
+  };
   return (
-    <div className='section-carousel' style={{ width: '100%', margin: '0 auto' }}>
+    <div
+      className="section-carousel"
+      style={{ width: '100%', margin: '0 auto' }}
+    >
       <Carousel
         items={images.map((src, index) => (
           <div
@@ -47,6 +60,7 @@ export default function CarouselComponent() {
               overflow: 'hidden',
               position: 'relative',
             }}
+            onClick={() => handleGallery(index)}
           >
             <img
               src={src}
@@ -55,7 +69,7 @@ export default function CarouselComponent() {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
-                transition: 'transform 0.3s ease', 
+                transition: 'transform 0.3s ease',
               }}
             />
           </div>
@@ -82,6 +96,24 @@ export default function CarouselComponent() {
           }
         }}
       />
+      {showGallery && (
+        <div className="section-carousel__gallery" onClick={() => setShowGallery(false)}>
+          <div
+            className="section-carousel__gallery__close"
+            onClick={() => setShowGallery(false)}
+          >
+            <IoClose size={30} />
+          </div>
+          <div onClick={(e) => e.stopPropagation()}>
+          <ImageGallery
+            items={imagesGallery}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            startIndex={currentIndex}
+          />
+          </div>
+        </div>
+      )}
     </div>
   );
 }

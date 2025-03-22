@@ -15,7 +15,7 @@
       url(/assets/backgroundPlanetHero.png);
     background-position: center center, center 50vh;
     background-repeat: no-repeat, no-repeat;
-    background-size: cover, 80% 100vh;
+    background-size: cover, 70% 100vh;
     width: 100%;
     height: 100vh;
     &__satellite {
@@ -70,13 +70,13 @@
 @media screen and (max-width: 640px) {
   .section-hero__content {
     background-position: center center, center 50vh;
-    background-size: cover, 95% 86vh;
+    background-size: cover, 100% 86vh;
   }
 }
 @media screen and (max-width: 576px) {
   .section-hero__content {
     background-position: center center, center 48vh;
-    background-size: cover, 130% 84vh;
+    background-size: cover, 140% 84vh;
     &__satellite {
       &--blue {
         display: none;
@@ -101,7 +101,7 @@
 @media screen and (max-width: 390px) {
   .section-hero__content {
     background-position: center center, center 43vh;
-    background-size: cover, 130% 77vh;
+    background-size: cover, 155% 77vh;
     &__satellite {
       &--big {
         top: 15%;
