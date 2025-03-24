@@ -12,7 +12,7 @@ function App() {
       <About />
       <CarouselComponent />
       <Gameplay />
-      <CarouselCards />
+      {/* <CarouselCards /> */}
       <Footer />
     </main>
   );

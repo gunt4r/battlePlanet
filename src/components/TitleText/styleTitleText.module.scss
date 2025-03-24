@@ -1,7 +1,6 @@
 .section-title {
-  font-family: "Merriweather Sans", sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
   font-size: 5rem;
-  line-height: 110x;
   text-align: center;
   letter-spacing: 0.03em;
   color: #f8faff;
@@ -10,11 +9,11 @@
   margin: 0;
   font-style: italic;
   font-weight: 900;
-  width: fit-content;
   display: flex;
-  margin-right: auto;
-  margin-left: auto;
   text-transform: uppercase;
+  max-width: 1140px;
+  width: fit-content;
+  justify-self: center;
 }
 @media screen and (max-width: 992px) {
   .section-title {

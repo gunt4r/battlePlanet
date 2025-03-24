@@ -40,6 +40,12 @@
     }
   }
 }
+@media screen and (max-width: 1440px) {
+  .section-hero__content {
+    background-size: cover, 800px 100vh;
+   
+  }
+}
 @media screen and (max-width: 1250px) {
   .section-hero__content__satellite {
     &--big {
@@ -58,8 +64,8 @@
 }
 @media screen and (max-width: 992px) {
   .section-hero__content {
-    background-position: center center, center 55vh;
-    background-size: cover, 80% 90vh;
+    background-position: center center, center 50vh;
+    background-size: cover, 745px 95vh;
     &__satellite {
       &--big {
         height: 320px;
@@ -67,16 +73,16 @@
     }
   }
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .section-hero__content {
-    background-position: center center, center 50vh;
-    background-size: cover, 100% 86vh;
+    background-position: center center, center 57vh;
+    background-size: cover, 576px 77vh;
   }
 }
 @media screen and (max-width: 576px) {
   .section-hero__content {
-    background-position: center center, center 48vh;
-    background-size: cover, 140% 84vh;
+    background-position: center center, center 51vh;
+    background-size: cover, 576px 77vh;
     &__satellite {
       &--blue {
         display: none;
@@ -100,8 +106,6 @@
 }
 @media screen and (max-width: 390px) {
   .section-hero__content {
-    background-position: center center, center 43vh;
-    background-size: cover, 155% 77vh;
     &__satellite {
       &--big {
         top: 15%;

@@ -3,23 +3,23 @@ import 'react-responsive-3d-carousel/dist/styles.css';
 import './styleCarouselCards.scss';
 
 const images = [
-    '/assets/CarouselCards/Acropolis.png',
-    '/assets/CarouselCards/Beacon.png',
-    '/assets/CarouselCards/Bigbang.png',
-    '/assets/CarouselCards/Blackhole.png',
-    '/assets/CarouselCards/Breakthrough.png',
-    '/assets/CarouselCards/ClimaticWeapons.png',
-    '/assets/CarouselCards/Coliseum.png',
-    '/assets/CarouselCards/Dreadnought.png',
-    '/assets/CarouselCards/PoleChange.png',
-    '/assets/CarouselCards/Sacrifice.png',
-    '/assets/CarouselCards/Spoilage.png',
-    '/assets/CarouselCards/StarBirth.png',
+    '/assets/CarouselCards/Acropolis.webp',
+    '/assets/CarouselCards/Beacon.webp',
+    '/assets/CarouselCards/Bigbang.webp',
+    '/assets/CarouselCards/Blackhole.webp',
+    '/assets/CarouselCards/Breakthrough.webp',
+    '/assets/CarouselCards/ClimaticWeapons.webp',
+    '/assets/CarouselCards/Coliseum.webp',
+    '/assets/CarouselCards/Dreadnought.webp',
+    '/assets/CarouselCards/PoleChange.webp',
+    '/assets/CarouselCards/Sacrifice.webp',
+    '/assets/CarouselCards/Spoilage.webp',
+    '/assets/CarouselCards/StarBirth.webp',
 ];
 
 export default function CarouselCards() {
     return (
-        <div className='section-carousel__cards' style={{ width: '100%', margin: '0 auto' }}>
+        <div className='section-carousel__cards' style={{ width: '100%', margin: '2rem auto 0 auto' }}>
             <Carousel
                 items={images.map((src, index) => (
                     <div

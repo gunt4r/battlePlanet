@@ -20,20 +20,20 @@ export default function Footer() {
     <footer className={styles['section-footer']}>
       {!showParagraphMobile && (
         <ParagraphText>
-          AWESOME SIGNATURES OF THREE ELEMENTS: $BTC, $ETH, $DASH <br /> OPENING
+          AWESOME SIGNATURES OF THREE ELEMENTS: $BTC, $ETH, $DASH  OPENING
           UNLIMITED POSSIBILITIES AND POWERFULL COMBINATIONS!
-          <br />
+          
           Is there a lot of profit to be made by the Leader of an Entire Planet?
-          <br /> Are you ready to check it out?!
+           Are you ready to check it out?!
         </ParagraphText>
       )}
       <TitleText>
-        READY TO COLONIZE <br /> UNIVERSE?
+        READY TO COLONIZE  UNIVERSE?
       </TitleText>
       {showParagraphMobile ? (
         <ParagraphText>
           The Universe is vast, but only the strongest will survive.
-          <br /> Will you rise up the challenge?!
+           Will you rise up the challenge?!
         </ParagraphText>
       ) : (
         <ParagraphText>

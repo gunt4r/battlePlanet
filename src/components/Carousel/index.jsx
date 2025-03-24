@@ -33,12 +33,20 @@ const imagesGallery = images.map((src) => ({
 }));
 export default function CarouselComponent() {
   const cardRefs = useRef([]);
+  const refGallery = useRef(null);
   const [showGallery, setShowGallery] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const handleGallery = (index) => {
     setCurrentIndex(index);
     setShowGallery(true);
   };
+  const categoryDisappear = () => {
+    const galleryElement = refGallery.current;
+    galleryElement.style.animation = `disappear 1s ease`;
+    setTimeout(() => {
+      setShowGallery(false); 
+    }, 1000);
+  }
   return (
     <div
       className="section-carousel"
@@ -97,14 +105,16 @@ export default function CarouselComponent() {
         }}
       />
       {showGallery && (
-        <div className="section-carousel__gallery" onClick={() => setShowGallery(false)}>
+        <div className={`section-carousel__gallery`} style={{
+          animation: !showGallery ? "disappear 1s ease" : "appear 1s ease"
+        }} ref={refGallery} onClick={() => categoryDisappear()}>
           <div
             className="section-carousel__gallery__close"
-            onClick={() => setShowGallery(false)}
+            onClick={() => categoryDisappear()}
           >
             <IoClose size={30} />
           </div>
-          <div onClick={(e) => e.stopPropagation()}>
+          <div className='section-carousel__gallery__images' onClick={(e) => e.stopPropagation()}>
           <ImageGallery
             items={imagesGallery}
             showFullscreenButton={false}
