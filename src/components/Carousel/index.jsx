@@ -7,7 +7,6 @@ import image5 from '/assets/imageCarousel5.jpeg';
 import image6 from '/assets/imageCarousel6.jpeg';
 import image7 from '/assets/imageCarousel7.jpeg';
 import image8 from '/assets/imageCarousel8.jpeg';
-import image9 from '/assets/imageCarousel9.jpeg';
 import image10 from '/assets/imageCarousel10.jpeg';
 import { Carousel } from 'react-responsive-3d-carousel';
 import 'react-responsive-3d-carousel/dist/styles.css';
@@ -24,7 +23,6 @@ const images = [
   image6,
   image7,
   image8,
-  image9,
   image10,
 ];
 const imagesGallery = images.map((src) => ({
@@ -44,7 +42,7 @@ export default function CarouselComponent() {
     const galleryElement = refGallery.current;
     galleryElement.style.animation = `disappear 1s ease`;
     setTimeout(() => {
-      setShowGallery(false); 
+      setShowGallery(false);
     }, 1000);
   }
   return (
