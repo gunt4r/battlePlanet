@@ -1,51 +1,144 @@
-import style from './styleHeader.module.scss';
-import classNames from 'classnames';
+import './styleHeader.scss';
 import Logo from '../Logo';
-import ButtonCenter from '../ButtonCenter';
-import { useEffect,useState } from 'react';
+import Octagon from '../ButtonCenter';
+import { useState } from 'react';
+import ModalWallet from '../ModalWallet';
+import ModalDonate from '../ModalDonate';
+import { FaBars, FaTimes } from 'react-icons/fa';
 export default function Header() {
-   const [hiddenElements, setHiddenElements] = useState(false);
-    useEffect(() => {
-      const updateHiddenElements = () => {
-        const screenWidth = window.innerWidth;
-  
-        if (screenWidth < 640) setHiddenElements(true);
-        else setHiddenElements(false);
-      };
-  
-      window.addEventListener("resize", updateHiddenElements);
-      updateHiddenElements();
-    }, []);
+  const [isOpenWallet, setIsOpenWallet] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isOpenDonateModal, setIsOpenDonateModal] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const handleClickConnect = () => {
+    if (!isAuthenticated) {
+      setIsOpenWallet(!isOpenWallet);
+    } else {
+      setIsDropdownOpen(!isDropdownOpen);
+    }
+  };
+
   return (
-    <header className={style['section-header']}>
-      <Logo />
-      <ul style={{ display: hiddenElements ? 'none' : 'flex' }} className={classNames(style['section-header__nav'])}>
-        <li className={classNames(style['section-header__nav__item'])}>
-          <a
-            className={classNames(style['section-header__nav__item__link'])}
-            href="/"
-          >
-            ABOUT
+    <header className="section-header">
+      <Octagon>
+        <Logo />
+      </Octagon>
+      <div className="desktop-buttons">
+        <Octagon>
+          <a href="/" className="section-header__play">
+            play
           </a>
-        </li>
-        <li className={classNames(style['section-header__nav__item'])}>
-          <a
-            className={classNames(style['section-header__nav__item__link'])}
-            href="/"
+        </Octagon>
+        <div className="section-header__connect-wrapper">
+          <button
+            onClick={handleClickConnect}
+            className="section-header__connect"
           >
-            COMMUNITY
-          </a>
-        </li>
-        <li className={classNames(style['section-header__nav__item'])}>
-          <a
-            className={classNames(style['section-header__nav__item__link'])}
-            href="/"
+            <Octagon fullOpacity={isAuthenticated}>
+              <p className="section-header__connect--text">
+                {isAuthenticated ? '0x349345463e4r' : 'connect'}
+              </p>
+            </Octagon>
+            <ModalWallet
+              isOpen={isOpenWallet}
+              onClose={() => setIsOpenWallet(false)}
+            />
+          </button>
+
+          {isAuthenticated && isDropdownOpen && (
+            <Octagon fullOpacity isDropdownButton>
+              <div className="section-header__connect__dropdown">
+                <button
+                  className="section-header__connect__dropdown--button"
+                  onClick={() => setIsOpenDonateModal(true)}
+                >
+                  donate
+                </button>
+                <button
+                  className="section-header__connect__dropdown--button"
+                  onClick={() => {
+                    setIsAuthenticated(false);
+                    setIsDropdownOpen(false);
+                  }}
+                >
+                  Disconnect
+                </button>
+              </div>
+            </Octagon>
+          )}
+
+          {isOpenDonateModal && (
+            <ModalDonate
+              isOpen={isOpenDonateModal}
+              onClose={() => setIsOpenDonateModal(false)}
+            />
+          )}
+        </div>
+      </div>
+
+      <Octagon className='button-menu' >
+        {' '}
+        <div className="burger-icon" onClick={() => setIsMobileMenuOpen(true)}>
+          <FaBars color="white" size={24} />
+        </div>
+      </Octagon>
+
+      {isMobileMenuOpen && (
+        <div className="section-header__mobile-menu">
+          <div
+            className="section-header__mobile-menu-close"
+            onClick={() => setIsMobileMenuOpen(false)}
           >
-            P2E
-          </a>
-        </li>
-      </ul>
-      <ButtonCenter styles={{ margin: 'unset', display: hiddenElements ? 'none' : 'flex' }}>play</ButtonCenter>
+            <FaTimes color="white" size={24} />
+          </div>
+
+          <Octagon isDark>
+            <a href="/" className="section-header__play">
+              play
+            </a>
+          </Octagon>
+
+          <div className="section-header__connect-wrapper__buttons">
+          <button
+            onClick={handleClickConnect}
+            className="section-header__connect"
+          >
+            <Octagon isDark fullOpacity={isAuthenticated}>
+              <p className="section-header__connect--text">
+                {isAuthenticated ? '0x349345463e4r' : 'connect'}
+              </p>
+            </Octagon>
+          </button>
+
+          {isAuthenticated && isDropdownOpen && (
+            <Octagon isDark fullOpacity isDropdownButton>
+              <div className="section-header__connect__dropdown">
+                <button
+                  className="section-header__connect__dropdown--button"
+                  onClick={() => {
+                    setIsOpenDonateModal(true);
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  donate
+                </button>
+                <button
+                  className="section-header__connect__dropdown--button"
+                  onClick={() => {
+                    setIsAuthenticated(false);
+                    setIsDropdownOpen(false);
+                    setIsMobileMenuOpen(false);
+                  }}
+                >
+                  Disconnect
+                </button>
+              </div>
+            </Octagon>
+          )}
+          </div>
+        </div>
+      )}
     </header>
   );
 }

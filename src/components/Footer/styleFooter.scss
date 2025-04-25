@@ -1,0 +1,36 @@
+.section-footer {
+  background-image: url('/assets/footerBackground.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(14, 12, 32, 1) 0%,
+      rgba(14, 12, 32, 0.8019257361) 15%,
+      rgba(14, 12, 32, 0.395167725) 61%,
+      rgb(14, 11, 30) 98%
+    );
+  }
+  &__play {
+    z-index: 10;
+    text-transform: uppercase;
+    align-self: center;
+    font-family: 'Titillium Web';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+}

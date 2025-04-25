@@ -1,4 +1,7 @@
 .section-carousel__cards {
+  width: 100%;
+  margin: 2rem auto 0 auto;
+  max-width: 1140px;
   .react-responsive-3d-carousel__item {
     width: 270px !important;
     height: 330px !important;
@@ -9,5 +12,4 @@
       height: 230px !important;
     }
   }
-  
 }

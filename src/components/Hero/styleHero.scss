@@ -1,0 +1,86 @@
+.section-hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('/assets/backgroundPlanetHero.png'),
+    url('/assets/backgroundHero.png');
+  background-position: center 50vh, top;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 70% 100vh, cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+      180deg,
+      rgba(14, 12, 32, 0.7) 0%,
+      rgba(14, 12, 32, 0.3019257361) 15%,
+      rgba(14, 12, 32, 0.395167725) 61%,
+      rgba(14, 11, 30, 1) 98%
+    );
+  }
+  &__content {
+    &__satellite {
+      position: absolute;
+      left: 0;
+      right: 5%;
+      margin-inline: auto;
+      width: 70%;
+      bottom: 0;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1140px;
+      justify-self: center;
+    }
+  }
+}
+@media screen and (max-width: 1440px) {
+  .section-hero__content {
+    background-size: auto 100vh, cover;
+  }
+}
+@media screen and (max-width: 992px) {
+  .section-hero {
+    background-position: center 50vh, center center;
+    background-size: auto 100vh, cover;
+    &__content {
+      &__satellite {
+        width: 110%;
+        left: -10%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .section-hero {
+    background-position: center 66vh, center center;
+    background-size: auto 70vh, cover;
+    &__content {
+      &__satellite {
+        width: 135%;
+        left: -20%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .section-hero {
+    background-position: center 66vh, center center;
+    background-size: auto 70vh, cover;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .section-hero {
+    background-size: auto 100vh, cover;
+  }
+}

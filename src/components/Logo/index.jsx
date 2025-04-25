@@ -1,13 +1,12 @@
 import logo from '/assets/logo.svg';
-import style from './styleLogo.module.scss';
-import classNames from 'classnames';
+import './styleLogo.scss';
 export default function Logo({stylesWrapper,stylesElement}) {
   return (
-    <a style={{...stylesWrapper}} href="/">
+    <a style={{...stylesWrapper}} className="section-logo" href="/">
       <img
         src={logo}
         style={{...stylesElement}}
-        className={classNames(style['section-logo'])}
+        className='section-logo__img'
         alt="Logo"
       />
     </a>

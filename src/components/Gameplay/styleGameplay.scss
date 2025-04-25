@@ -1,35 +1,42 @@
 .section-gameplay {
+  background-image: url('/assets/gameplayBackground.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(
-    180deg,
-    rgba(17, 17, 17, 1) 31%,
-    rgba(17, 17, 17, 0.9551470246301645) 64%,
-    rgba(17, 17, 17, 0.9019257361147583) 90%,
-    rgba(17, 17, 17, 0.8795167725293243) 100%,
-    rgba(17, 17, 17, 1) 100%
-  );
   position: relative;
-  &__content {
-    background-image: url(/assets/gameplayBackground.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  padding-bottom: 5rem;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgb(14, 11, 30) 31%,
+      rgba(14, 11, 30, 0.1551470246) 64%,
+      rgba(14, 11, 30, 0.601926) 90%,
+      rgba(14, 11, 30, 1) 100%,
+      rgb(14, 11, 30) 100%
+    );
+  }
+  &__content {
     &__cards {
       display: flex;
       justify-self: center;
     }
     &--planetB {
       position: absolute;
+      height: 900px;
       top: 20%;
       left: 0;
       z-index: 10;
     }
     &--planetR {
       position: absolute;
+      height: 900px;
       top: 10%;
       right: 0;
     }
@@ -105,27 +112,6 @@
     }
     &--satelliteR {
       display: none;
-    }
-  }
-}
-@media screen and (max-width: 450px) {
-  .section-gameplay {
-    height: 110vh;
-    &__content {
-      &--planetB {
-        height: 434px;
-        top: 35%;
-        left: -25px;
-      }
-      &--planetR {
-        height: 422px;
-        top: 68%;
-        right: -23px;
-      }
-      &__cards {
-        height: 250px;
-        padding-top: 2rem;
-      }
     }
   }
 }
