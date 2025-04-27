@@ -13,14 +13,9 @@ export default function Octagon({
                                     fullOpacity,
                                     className
                                 }) {
-    return (
-        <div
+    return (<div
             style={{...styles}}
-            className={`octagon ${isAboutCard ? 'about-card' : ''} ${
-                isModal ? 'modal' : ''
-            } ${isButtonModal ? 'button--modal' : ''} ${
-                isDropdownButton ? 'dropdown-button' : ''
-            } ${fullOpacity ? 'full-opacity' : ''}
+            className={`octagon ${isAboutCard ? 'about-card' : ''} ${isModal ? 'modal' : ''} ${isButtonModal ? 'button--modal' : ''} ${isDropdownButton ? 'dropdown-button' : ''} ${fullOpacity ? 'full-opacity' : ''}
       ${isInput ? 'input' : ''}
       ${isConfirmButton ? 'confirm-button' : ''}
       ${isDark ? 'dark' : ''}
@@ -30,6 +25,5 @@ export default function Octagon({
             <i className={"edge1"}></i>
             <i className={"edge2"}></i>
             {children}
-        </div>
-    );
+        </div>);
 }

@@ -65,10 +65,10 @@ body {
   text-transform: uppercase;
   font-family: 'Titillium Web';
   position: relative;
-  height: 51px;
+  //height: 51px;
   display: flex;
   align-items: center;
-  padding: 0 28px;
+  padding: 10px 28px;
   background: rgba(14,11,30,.3);
   &.about-card{
     padding:0;
@@ -76,5 +76,7 @@ body {
     --side1: -12px;
     --side2: 19px;
     --width: 60px;
+    height:auto;
+    margin:20px;
   }
 }

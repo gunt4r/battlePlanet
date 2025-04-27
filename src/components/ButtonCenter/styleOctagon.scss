@@ -391,99 +391,99 @@ $paddingWidth: 28px;
   padding: 3px 28px;
 }
 @media screen and (max-width: 1200px) {
-  .about-card {
-    width: 80%;
-  }
+  //.about-card {
+  //  width: 80%;
+  //}
   .about-play {
     padding: 3px 31px;
   }
 }
 @media screen and (max-width: 768px) {
-  .about-card {
-    width: 80%;
-    &::before {
-      clip-path: polygon(
-        4% 0,
-        95% 0,
-        100% 6%,
-        100% 93%,
-        95% 100%,
-        5% 100%,
-        0 94%,
-        0 6%
-      );
-    }
-    &::after {
-      background: rgba(255, 255, 255, 0.3);
-      clip-path: polygon(
-        4% 0,
-        95% 0,
-        100% 6%,
-        100% 93%,
-        95% 100%,
-        5% 100%,
-        0 94%,
-        0 6%
-      );
-    }
-  }
-  .about-play {
-    width: 80%;
-    margin: 0 0 1rem 0;
-    &::before {
-      clip-path: polygon(
-        3% 0,
-        96% 0,
-        100% 18%,
-        100% 77%,
-        97% 100%,
-        3% 100%,
-        0 75%,
-        0 18%
-      );
-    }
-    &::after {
-      background: rgba(255, 255, 255, 0.3);
-      clip-path: polygon(
-        3% 0,
-        96% 0,
-        100% 18%,
-        100% 77%,
-        97% 100%,
-        3% 100%,
-        0 75%,
-        0 18%
-      );
-    }
-  }
-  .about-socials {
-    width: 80%;
-    &::before {
-      clip-path: polygon(
-        3% 0,
-        96% 0,
-        100% 18%,
-        100% 77%,
-        97% 100%,
-        3% 100%,
-        0 75%,
-        0 18%
-      );
-    }
-    &::after {
-      background: rgba(255, 255, 255, 0.3);
-      clip-path: polygon(
-        3% 0,
-        96% 0,
-        100% 18%,
-        100% 77%,
-        97% 100%,
-        3% 100%,
-        0 75%,
-        0 18%
-      );
-    }
-  }
+  //.about-card {
+  //  width: 80%;
+  //  &::before {
+  //    clip-path: polygon(
+  //      4% 0,
+  //      95% 0,
+  //      100% 6%,
+  //      100% 93%,
+  //      95% 100%,
+  //      5% 100%,
+  //      0 94%,
+  //      0 6%
+  //    );
+  //  }
+  //  &::after {
+  //    background: rgba(255, 255, 255, 0.3);
+  //    clip-path: polygon(
+  //      4% 0,
+  //      95% 0,
+  //      100% 6%,
+  //      100% 93%,
+  //      95% 100%,
+  //      5% 100%,
+  //      0 94%,
+  //      0 6%
+  //    );
+  //  }
+  //}
+  //.about-play {
+  //  width: 80%;
+  //  margin: 0 0 1rem 0;
+  //  &::before {
+  //    clip-path: polygon(
+  //      3% 0,
+  //      96% 0,
+  //      100% 18%,
+  //      100% 77%,
+  //      97% 100%,
+  //      3% 100%,
+  //      0 75%,
+  //      0 18%
+  //    );
+  //  }
+  //  &::after {
+  //    background: rgba(255, 255, 255, 0.3);
+  //    clip-path: polygon(
+  //      3% 0,
+  //      96% 0,
+  //      100% 18%,
+  //      100% 77%,
+  //      97% 100%,
+  //      3% 100%,
+  //      0 75%,
+  //      0 18%
+  //    );
+  //  }
+  //}
+  //.about-socials {
+  //  width: 80%;
+  //  &::before {
+  //    clip-path: polygon(
+  //      3% 0,
+  //      96% 0,
+  //      100% 18%,
+  //      100% 77%,
+  //      97% 100%,
+  //      3% 100%,
+  //      0 75%,
+  //      0 18%
+  //    );
+  //  }
+  //  &::after {
+  //    background: rgba(255, 255, 255, 0.3);
+  //    clip-path: polygon(
+  //      3% 0,
+  //      96% 0,
+  //      100% 18%,
+  //      100% 77%,
+  //      97% 100%,
+  //      3% 100%,
+  //      0 75%,
+  //      0 18%
+  //    );
+  //  }
+  //}
   .modal {
     width: 90%;
     padding: 40px 20px;

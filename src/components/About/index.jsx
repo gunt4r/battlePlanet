@@ -70,7 +70,7 @@ export default function About() {
                 <TitleText styles={{paddingTop: '2rem', marginBottom: '4rem'}}>about</TitleText>
                 {itemsCard.map((item, index) => {
                     return (
-                        <Octagon isAboutCard key={index} styles={{marginBottom: '2rem', height: 'unset'}}>
+                        <Octagon isAboutCard key={index}>
                             <div className="section-about__content__card">
                                 <div className='section-about__content__card__img'>
                                     <img src={item.img} alt={""}/>
