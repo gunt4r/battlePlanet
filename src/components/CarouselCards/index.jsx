@@ -24,30 +24,12 @@ export default function CarouselCards({ styles }) {
         items={images.map((src, index) => (
           <div
             key={index}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              position: 'relative',
-              background: 'transparent',
-              border: 'none',
-              outline: 'none',
-              boxShadow: 'none',
-              backdropFilter: 'none',
-            }}
+            className='section-carousel__cards--card'
           >
             <img
               src={src}
               alt="carousel card"
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                display: 'block',
-                padding: 0,
-                margin: 0,
-                border: 'none',
-              }}
+              className='section-carousel__cards--card--img'
             />
           </div>
         ))}

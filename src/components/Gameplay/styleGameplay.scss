@@ -5,7 +5,6 @@
   background-size: cover;
   width: 100%;
   position: relative;
-  padding-bottom: 5rem;
   &::before {
     content: '';
     position: absolute;
@@ -84,7 +83,7 @@
     }
     &--planetR {
       height: 400px;
-      top: 70%;
+      top: 100%;
     }
     &__cards {
       height: 350px;
@@ -115,30 +114,4 @@
     }
   }
 }
-@media screen and (min-width: 1440px) {
-  .section-gameplay {
-    height: 110vh;
-    &__content {
-      height: 110vh;
 
-      &--planetB {
-        height: 700px;
-        top: 50%;
-      }
-      &--planetR {
-        height: 700px;
-        top: 50%;
-      }
-      &__cards {
-        height: 450px;
-      }
-      &--satelliteL {
-        left: 5%;
-      }
-      &--satelliteR {
-        height: 80px;
-        right: 5%;
-      }
-    }
-  }
-}

@@ -1,7 +1,28 @@
 .section-carousel__cards {
   width: 100%;
-  margin: 2rem auto 0 auto;
+  margin: auto 0 2rem;
+  justify-self: center;
   max-width: 1140px;
+  &--card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    backdrop-filter: none;
+    &--img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+  }
   .react-responsive-3d-carousel__item {
     width: 270px !important;
     height: 330px !important;

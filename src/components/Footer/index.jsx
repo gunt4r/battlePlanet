@@ -15,7 +15,7 @@ export default function Footer() {
         up the challenge?!
       </ParagraphText>
 
-      <Octagon isDark styles={{padding: '3px 56px',justifySelf:'center'}}>
+      <Octagon isDark styles={{justifySelf:'center'}}>
         {' '}
         <a href="/" className="section-footer__play">
           play

@@ -20,8 +20,8 @@ export default function Gameplay() {
   return (
     <section className="section-gameplay">
       <article className="section-gameplay__content">
-        <TitleText styles={{marginBottom:'3rem'}}>unique gameplay</TitleText>
-        <CarouselCards styles={{ margin: '2rem auto 7rem' }} />
+        <TitleText>unique gameplay</TitleText>
+        <CarouselCards />
         <img
           className="section-gameplay__content--planetB"
           style={{ transform: `translateY(${-scrollY * 0.1}px)` }}
@@ -30,19 +30,19 @@ export default function Gameplay() {
         />
         <img
           className="section-gameplay__content--planetR"
-          style={{ transform: `translateY(${-scrollY * 0.15 + 300}px)` }}
+          style={{ transform: `translateY(${-scrollY * 0.15 + 400}px)` }}
           src={planetRed}
           alt="planet red"
         />
         <img
           className="section-gameplay__content--satelliteL"
-          style={{ transform: `translateY(${-scrollY * 0.09}px)` }}
+          style={{ transform: `translateY(${-scrollY * 0.09 + 300}px)` }}
           src={satelliteLeft}
           alt="satellite"
         />
         <img
           className="section-gameplay__content--satelliteR"
-          style={{ transform: `translateY(${-scrollY * 0.09}px)` }}
+          style={{ transform: `translateY(${-scrollY * 0.09 + 100}px)` }}
           src={satelliteRight}
           alt="satellite"
         />

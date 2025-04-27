@@ -7,7 +7,7 @@ import ModalDonate from '../ModalDonate';
 import { FaBars, FaTimes } from 'react-icons/fa';
 export default function Header() {
   const [isOpenWallet, setIsOpenWallet] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isOpenDonateModal, setIsOpenDonateModal] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -24,12 +24,12 @@ export default function Header() {
       <Octagon>
         <Logo />
       </Octagon>
-      <div className="desktop-buttons">
-        <Octagon>
+        <Octagon className='section-header__play--wrapper'>
           <a href="/" className="section-header__play">
             play
           </a>
         </Octagon>
+      <div className="desktop-buttons">
         <div className="section-header__connect-wrapper">
           <button
             onClick={handleClickConnect}
