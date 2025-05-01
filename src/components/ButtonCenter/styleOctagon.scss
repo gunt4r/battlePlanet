@@ -69,7 +69,12 @@ $paddingWidth: 28px;
 .about-play {
   margin-right: 2rem;
   padding: 3px 56px;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.4s ease-in-out;
+  }
 }
+
 .about-socials {
   padding: 3px 28px;
 }

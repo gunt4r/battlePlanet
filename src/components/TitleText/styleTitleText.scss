@@ -1,16 +1,19 @@
 .section-title {
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
   max-width: 1140px;
-  margin: 0 0 20px 0;
+  margin: 0 0 1rem 0;
   font-family: 'Orbitron';
   font-weight: 900;
-  font-size: 96px;
+  font-size: 88px;
   text-align: center;
   color: #ffffff;
   text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.7);
   justify-self: center;
   position: relative;
+  &--first {
+    font-size: 96px;
+  }
 }
 @media screen and (max-width: 992px) {
   .section-title {

@@ -107,6 +107,13 @@ body {
   animation: dropdownFadeIn 0.25s ease-out;
   transform-origin: top;
 }
+.section-hero__content__socials {
+  position: absolute;
+  bottom: 50px;
+  justify-self: center;
+  left: 0;
+  right: 0;
+}
 @keyframes dropdownFadeIn {
   from {
     opacity: 0;

@@ -3,10 +3,10 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 3rem;
-  max-width: 1140px;
   width: 100%;
-  margin-bottom: 8rem;
-
+  margin-bottom: 9rem;
+  z-index: 6;
+  position: relative;
   &__play {
     z-index: 10;
     text-transform: uppercase;
