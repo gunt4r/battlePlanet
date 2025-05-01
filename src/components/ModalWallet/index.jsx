@@ -36,7 +36,7 @@ export default function ModalWallet({ isOpen, onClose }) {
         onClose={() => onClose()}
         modalTitle={'Connect wallet'}
         modalSubTitle={'Connect a wallet to continue'}
-        className="modal-wallet"
+        className={`${isOpen ? 'modal-overlay--active' : ''}`}
       >
         <div className="modal-wallet">
           {' '}

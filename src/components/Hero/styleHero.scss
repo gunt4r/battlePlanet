@@ -1,5 +1,5 @@
 .section-hero {
-  width: 100%;
+  min-height: 700px;
   height: 100vh;
   overflow: hidden;
   background-image: url('/assets/backgroundPlanetHero.png'),
@@ -25,6 +25,7 @@
       rgba(14, 12, 32, 0.395167725) 61%,
       rgba(14, 11, 30, 1) 98%
     );
+    min-height: 700px;
   }
   &__content {
     &__satellite {
@@ -82,5 +83,11 @@
 @media screen and (min-width: 1440px) {
   .section-hero {
     background-size: auto 100vh, cover;
+  }
+}
+@media screen and (max-height: 700px) {
+  .section-hero {
+    background-size: auto 500px, cover;
+    background-position: center 500px, center center;
   }
 }

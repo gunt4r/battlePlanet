@@ -46,34 +46,38 @@ export default function Header() {
             />
           </button>
 
-          {isAuthenticated && isDropdownOpen && (
-            <Octagon fullOpacity isDropdownButton>
-              <div className="section-header__connect__dropdown">
-                <button
-                  className="section-header__connect__dropdown--button"
-                  onClick={() => setIsOpenDonateModal(true)}
-                >
-                  donate
-                </button>
-                <button
-                  className="section-header__connect__dropdown--button"
-                  onClick={() => {
-                    setIsAuthenticated(false);
-                    setIsDropdownOpen(false);
-                  }}
-                >
-                  Disconnect
-                </button>
-              </div>
-            </Octagon>
-          )}
+          <Octagon
+            className={`${
+              isAuthenticated && isDropdownOpen
+                ? 'section-header__connects--active'
+                : ''
+            } section-header__connects`}
+            fullOpacity
+            isDropdownButton
+          >
+            <div className="section-header__connect__dropdown">
+              <button
+                className="section-header__connect__dropdown--button"
+                onClick={() => setIsOpenDonateModal(true)}
+              >
+                donate
+              </button>
+              <button
+                className="section-header__connect__dropdown--button"
+                onClick={() => {
+                  setIsAuthenticated(false);
+                  setIsDropdownOpen(false);
+                }}
+              >
+                Disconnect
+              </button>
+            </div>
+          </Octagon>
 
-          {isOpenDonateModal && (
-            <ModalDonate
-              isOpen={isOpenDonateModal}
-              onClose={() => setIsOpenDonateModal(false)}
-            />
-          )}
+          <ModalDonate
+            isOpen={isOpenDonateModal}
+            onClose={() => setIsOpenDonateModal(false)}
+          />
         </div>
       </div>
 
@@ -84,61 +88,70 @@ export default function Header() {
         </div>
       </Octagon>
 
-      {isMobileMenuOpen && (
-        <div className="section-header__mobile-menu">
-          <div
-            className="section-header__mobile-menu-close"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            <FaTimes color="white" size={24} />
-          </div>
-
-          <Octagon isDark>
-            <a href="/" className="section-header__play">
-              play
-            </a>
-          </Octagon>
-
-          <div className="section-header__connect-wrapper__buttons">
-            <button
-              onClick={handleClickConnect}
-              className="section-header__connect"
-            >
-              <Octagon isDark fullOpacity={isAuthenticated}>
-                <p className="section-header__connect--text">
-                  {isAuthenticated ? '0x349345463e4r' : 'connect'}
-                </p>
-              </Octagon>
-            </button>
-
-            {isAuthenticated && isDropdownOpen && (
-              <Octagon isDark fullOpacity isDropdownButton>
-                <div className="section-header__connect__dropdown">
-                  <button
-                    className="section-header__connect__dropdown--button"
-                    onClick={() => {
-                      setIsOpenDonateModal(true);
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    donate
-                  </button>
-                  <button
-                    className="section-header__connect__dropdown--button"
-                    onClick={() => {
-                      setIsAuthenticated(false);
-                      setIsDropdownOpen(false);
-                      setIsMobileMenuOpen(false);
-                    }}
-                  >
-                    Disconnect
-                  </button>
-                </div>
-              </Octagon>
-            )}
-          </div>
+      <div
+        className={`section-header__mobile-menu ${
+          isMobileMenuOpen ? 'section-header__mobile-menu--active' : ''
+        }`}
+      >
+        <div
+          className="section-header__mobile-menu-close"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <FaTimes color="white" size={24} />
         </div>
-      )}
+
+        <Octagon isDark>
+          <a href="/" className="section-header__play">
+            play
+          </a>
+        </Octagon>
+
+        <div className="section-header__connect-wrapper__buttons">
+          <button
+            onClick={handleClickConnect}
+            className="section-header__connect"
+          >
+            <Octagon isDark fullOpacity={isAuthenticated}>
+              <p className="section-header__connect--text">
+                {isAuthenticated ? '0x349345463e4r' : 'connect'}
+              </p>
+            </Octagon>
+          </button>
+
+          <Octagon
+            className={`${
+              isAuthenticated && isDropdownOpen
+                ? 'section-header__connects--active'
+                : ''
+            } section-header__connects`}
+            isDark
+            fullOpacity
+            isDropdownButton
+          >
+            <div className="section-header__connect__dropdown">
+              <button
+                className="section-header__connect__dropdown--button"
+                onClick={() => {
+                  setIsOpenDonateModal(true);
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                donate
+              </button>
+              <button
+                className="section-header__connect__dropdown--button"
+                onClick={() => {
+                  setIsAuthenticated(false);
+                  setIsDropdownOpen(false);
+                  setIsMobileMenuOpen(false);
+                }}
+              >
+                Disconnect
+              </button>
+            </div>
+          </Octagon>
+        </div>
+      </div>
     </header>
   );
 }

@@ -40,6 +40,8 @@ export default function ModalDonate({ isOpen, onClose }) {
         onClose={() => onClose()}
         modalTitle={'TOP UP YOUR ACCOUNT'}
         modalSubTitle={'Buy $ST to your gaming account'}
+        className={`${isOpen ? 'modal-overlay--active' : ''}`}
+
       >
         <div className="modal-donate">
           <div className='modal-donate__inputs'>

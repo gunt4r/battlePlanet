@@ -9,9 +9,7 @@ import Octagon from '../ButtonCenter';
 import Container from '../Container';
 export default function Hero() {
   const [showParagraph, setShowParagraph] = useState(true);
-  const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
-    const handlerScroll = () => setScrollY(window.scrollY);
     const handlerResize = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 576) {
@@ -20,7 +18,6 @@ export default function Hero() {
     };
 
     window.addEventListener('resize', handlerResize);
-    window.addEventListener('scroll', handlerScroll);
     handlerResize();
   }, []);
   return (
@@ -31,7 +28,6 @@ export default function Hero() {
           src={heroSlug}
           alt="Satellite"
           className="section-hero__content__satellite"
-          style={{ transform: `translateY(${-scrollY * 0.3}px)` }}
         />
         <div className="section-hero__content__text">
           <TitleText isFirst className="section-hero__content__text--title">

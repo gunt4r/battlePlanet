@@ -3,16 +3,15 @@ import './styleModal.scss';
 import Octagon from '../ButtonCenter';
 import { CgClose } from "react-icons/cg";
 export default function ModalBackground({
-  isOpen,
   onClose,
   children,
   modalTitle,
   modalSubTitle,
+  className
 }) {
-  if (!isOpen) return null;
 
   return createPortal(
-    <div className="modal-overlay" onClick={onClose}>
+    <div className={`modal-overlay ${className ? className : ''}`} onClick={onClose}>
       <div
         onClick={(e) => e.stopPropagation()}
       >
