@@ -4,16 +4,11 @@
   justify-content: space-between;
   padding-top: 3rem;
   margin-bottom: 9rem;
-  z-index: 6;
-  position: relative;
   &__play {
-    z-index: 10;
     text-transform: uppercase;
-    align-self: center;
     font-family: 'Titillium Web';
     font-weight: 600;
     font-size: 20px;
-    line-height: 30px;
     color: #ffffff;
     text-decoration: none;
     &:hover {
@@ -24,22 +19,19 @@
   &__connect {
     background: none;
     border: none;
-    z-index: 11;
     cursor: pointer;
+    z-index: 11;
     position: relative;
     &--text {
-      z-index: 13;
       font-family: 'Titillium Web';
       font-weight: 600;
       font-size: 20px;
-      line-height: 30px;
-      text-align: center;
       text-transform: uppercase;
       color: #ffffff;
       margin: 0;
+      transition: width 0.4s ease-in-out;
       &:hover {
         opacity: 0.7;
-        transition: 0.4s ease-in-out;
       }
     }
     &-wrapper {
@@ -55,17 +47,12 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      justify-content: center;
-      z-index: 10;
       &--button {
         background: none;
         border: none;
-        z-index: 11;
         font-family: 'Titillium Web';
         font-weight: 600;
         font-size: 20px;
-        line-height: 30px;
-        text-align: center;
         text-transform: uppercase;
         color: #ffffff;
         cursor: pointer;
@@ -91,22 +78,17 @@
     z-index: 101;
     transition: 0.5s ease-in-out;
     transform: translateX(100%);
-    .section-header__play,
-    .section-header__connect {
-      font-size: 24px;
-    }
     &--active {
       transform: translateX(0);
     }
+    &-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      cursor: pointer;
+    }
   }
 
-  &__mobile-menu-close {
-    position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
-    cursor: pointer;
-    z-index: 102;
-  }
 }
 .desktop-buttons {
   display: flex;
@@ -116,7 +98,6 @@
 
 .burger-icon {
   display: none;
-  z-index: 100;
   cursor: pointer;
   height: 24px;
 }

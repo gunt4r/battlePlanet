@@ -65,8 +65,8 @@ export default function Header() {
               <button
                 className="section-header__connect__dropdown--button"
                 onClick={() => {
-                  setIsAuthenticated(false);
                   setIsDropdownOpen(false);
+                  setIsAuthenticated(false);
                 }}
               >
                 Disconnect
@@ -141,8 +141,8 @@ export default function Header() {
               <button
                 className="section-header__connect__dropdown--button"
                 onClick={() => {
-                  setIsAuthenticated(false);
                   setIsDropdownOpen(false);
+                  setIsAuthenticated(false);
                   setIsMobileMenuOpen(false);
                 }}
               >

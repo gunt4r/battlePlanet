@@ -23,10 +23,7 @@ export default function Footer() {
         </Octagon>
         <Logo
           stylesWrapper={{
-            display: 'flex',
-            justifyContent: 'center',
             margin: '7rem 0 3rem 0',
-            justifySelf: 'center',
             height: '61px',
           }}
         />
