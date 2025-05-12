@@ -111,13 +111,13 @@ export default function About() {
         src={yellowSatellite}
         alt="Satellite"
         className="section-about__content__satellite--yellow"
-        style={{ transform: `translateY(${-scrollY * 0.2}px)` }}
+        style={{ transform: `translateY(${-scrollY * 0.4}px)` }}
       />
       <img
         src={redSatellite}
         alt="Satellite"
         className="section-about__content__satellite--red"
-        style={{ transform: `translateY(${-scrollY * 0.3}px)` }}
+        style={{ transform: `translateY(${-scrollY * 0.4}px)` }}
       />
     </section>
   );

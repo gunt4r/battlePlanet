@@ -1,5 +1,5 @@
 .section-paragraph {
-  font-size: 1.5rem;
+  font-size: 24px;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -12,26 +12,19 @@
 }
 @media screen and (max-width: 1200px) {
   .section-paragraph {
-    font-size: 1.2rem;
+    font-size: 22px;
     line-height: 35px;
-    width: 90%;
   }
 }
 @media screen and (max-width: 992px) {
   .section-paragraph {
-    font-size: 1.1rem;
+    font-size: 18px;
     line-height: 30px;
   }
 }
 @media screen and (max-width: 768px) {
   .section-paragraph {
-    font-size: 0.9rem;
-    line-height: 25px;
-  }
-}
-@media screen and (max-width: 455px) {
-  .section-paragraph {
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 25px;
   }
 }
